@@ -5,7 +5,7 @@ O intuito deste teste é avaliar seus conhecimentos técnicos com o back-end, pa
 
 O teste consiste em parsear [este arquivo de texto (CNAB)](https://github.com/mlalbuquerque/desafio-ruby-backend/blob/master/CNAB.txt) e salvar suas informações (transações financeiras) em uma base de dados a critério do candidato.
 
-Este desafio deve ser feito por você em sua casa. Gaste o tempo que você quiser, porém normalmente você não deve precisar de mais do que algumas horas.
+Este desafio deve ser feito por você em sua casa. 
 
 # Instruções de entrega do desafio
 
