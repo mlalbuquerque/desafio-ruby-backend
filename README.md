@@ -13,5 +13,5 @@ After that, you can see Rails top page on http://localhost:3000/.
 
 Login with credentials:
 
-email: 'admin@example.com'
-password: '123@qwe'
+- email: admin@example.com
+- password: 123@qwe
