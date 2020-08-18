@@ -1,24 +1,17 @@
-# README
+# Desafio Ruby Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run
 
-Things you may want to cover:
+```
+$ make setup
+```
 
-* Ruby version
+It will build the docker containers and start the application. This could take a while :-)
+(depends on docker-compose version 1.23)
 
-* System dependencies
+After that, you can see Rails top page on http://localhost:3000/.
 
-* Configuration
+Login with credentials:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+email: 'admin@example.com'
+password: '123@qwe'
