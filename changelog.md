@@ -2,6 +2,8 @@
 
 criando o scaffold do modelo Arquivo
 
+instalando active storage
+
 ## v0.0.3
 
 instalando rspec
