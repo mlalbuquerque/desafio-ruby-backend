@@ -2,6 +2,7 @@
 
 Definindo diagrama de entidade relacionamento
 
+Instalando rubocop
 
 ## v0.0.1
 
@@ -17,5 +18,4 @@ Rails 6.0.3.2
 # rails new financial_movements
 
 # bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java
-
 ```
