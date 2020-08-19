@@ -11,7 +11,7 @@ class Usuario < ApplicationRecord
     usuario = find_by(uid: options[:id])
     return usuario if usuario
 
-    user_params = { uid: :uid, email: :email, nome: :name, primeiro_nome: :given_name,
+    user_params = { uid: :id, email: :email, nome: :name, primeiro_nome: :given_name,
                     sobrenome: :family_name, foto: :picture, token: :access_token }
     opt = options.clone
     user_params.each { |k, v| opt[k] = opt[v] }
