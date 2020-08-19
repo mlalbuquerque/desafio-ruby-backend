@@ -1,3 +1,7 @@
+## v0.0.4
+
+criando o scaffold do modelo Arquivo
+
 ## v0.0.3
 
 instalando rspec

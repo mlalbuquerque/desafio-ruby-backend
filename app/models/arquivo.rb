@@ -1,0 +1,2 @@
+class Arquivo < ApplicationRecord
+end
