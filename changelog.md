@@ -1,3 +1,9 @@
+## v0.0.6
+
+testes de modelo 
+
+ * Usuario
+
 ## v0.0.5
 
 add login pelo google
