@@ -1,3 +1,8 @@
+## v0.0.2
+
+Definindo diagrama de entidade relacionamento
+
+
 ## v0.0.1
 
 Criando o projeto
