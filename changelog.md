@@ -4,6 +4,10 @@ criando o scaffold do modelo Arquivo
 
 instalando active storage
 
+calculando sha1 ao fazer upload do arquivo
+
+exibir nome e tamanho do arquivo ao listar todos
+
 ## v0.0.3
 
 instalando rspec
