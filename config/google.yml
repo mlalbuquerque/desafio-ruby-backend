@@ -1,0 +1,36 @@
+default: &default
+
+  app:
+    client_id: <%= ENV['CLIENT_ID'] %> 
+    client_secret: <%= ENV['CLIENT_SECRET'] %>
+
+  auth:
+    grant_type: "authorization_code"
+    client_id: <%= ENV['CLIENT_ID'] %> 
+    client_secret: <%= ENV['CLIENT_SECRET'] %>
+
+  refresh:
+    grant_type: "refresh_token"
+    client_id: <%= ENV['CLIENT_ID'] %> 
+    client_secret: <%= ENV['CLIENT_SECRET'] %>
+
+  url:
+    callback: /callback
+    auth: https://oauth2.googleapis.com/token
+    refresh: https://www.googleapis.com/oauth2/v4/token
+    info: https://www.googleapis.com/oauth2/v1/userinfo
+    login: https://accounts.google.com/o/oauth2/auth
+    params_login:
+      client_id: <%= ENV['CLIENT_ID'] %> 
+      response_type: code
+      scope: email profile openid
+
+
+test:
+  *default
+
+development:
+  *default
+
+production:
+  *default

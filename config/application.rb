@@ -17,5 +17,7 @@ module FinancialMovements
     # the framework and any gems in your application.
     config.i18n.default_locale = :'pt-BR'
     config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.yml')]
+
+    config.google = config_for(:google).deep_symbolize_keys
   end
 end
