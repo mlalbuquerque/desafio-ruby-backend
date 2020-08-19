@@ -1,3 +1,15 @@
+## v0.0.5
+
+add login pelo google
+
+criado modelo Usuario
+
+add slim
+
+converte application.html.erb para slim
+
+exibe foto e nome do usuario logado
+
 ## v0.0.4
 
 criando o scaffold do modelo Arquivo
