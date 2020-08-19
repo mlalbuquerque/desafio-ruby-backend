@@ -1,0 +1,20 @@
+require: 
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-i18n
+  - rubocop-rspec
+  - rubocop-rake
+  - rubocop-md
+AllCops:
+  Exclude:
+    - bin/*
+    - node_modules/**/*
+    - db/seeds.rb
+    - db/schema.rb
+    - db/migrate/*
+    - README.md
+  NewCops: enable
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
