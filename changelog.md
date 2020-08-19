@@ -8,6 +8,8 @@ calculando sha1 ao fazer upload do arquivo
 
 exibir nome e tamanho do arquivo ao listar todos
 
+traduzido e exibindo nome e tamanho no arquivos/show.html.erb
+
 ## v0.0.3
 
 instalando rspec

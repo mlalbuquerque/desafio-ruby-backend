@@ -5,5 +5,15 @@
   <%= @arquivo.sha1 %>
 </p>
 
-<%= link_to 'Edit', edit_arquivo_path(@arquivo) %> |
-<%= link_to 'Back', arquivos_path %>
+<p>
+  <strong>Nome:</strong>
+  <%= @arquivo.documento.blob.filename %>
+</p>
+
+<p>
+  <strong>Tamanho:</strong>
+  <%= number_to_human_size @arquivo.documento.blob.byte_size  %>
+</p>
+
+<%= link_to 'Editar', edit_arquivo_path(@arquivo) %> |
+<%= link_to 'Listar Arquivos', arquivos_path %>
