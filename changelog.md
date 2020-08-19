@@ -1,3 +1,15 @@
+## v0.0.3
+
+instalando rspec
+
+```
+rails generate rspec: install
+```
+
+add config/locales/pt-BR.yml
+
+define idioma da aplicacao como pt-BR
+
 ## v0.0.2
 
 Definindo diagrama de entidade relacionamento

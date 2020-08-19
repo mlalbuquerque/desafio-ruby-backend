@@ -1,0 +1,3 @@
+pt-BR:
+  rspec:
+    wrong_environment: Os testes não podem rodar em ambiente de produção!
