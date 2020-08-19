@@ -1,6 +1,6 @@
 # Ruby Backend Challenge
 
-###### Desenvolvido por Caio Nascimento (@caio-nas) - https://www.linkedin.com/in/caiomvnascimento/
+###### Caio Nascimento (@caio-nas) - https://www.linkedin.com/in/caiomvnascimento/
 
 ### Requirements
 
