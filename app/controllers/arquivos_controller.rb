@@ -23,6 +23,7 @@ class ArquivosController < ApplicationController
   # POST /arquivos.json
   def create
     @arquivo = Arquivo.new(arquivo_params)
+    set_sha1
 
     respond_to do |format|
       if @arquivo.save
@@ -61,6 +62,10 @@ class ArquivosController < ApplicationController
 
   private
 
+  def set_sha1
+    @arquivo.sha1 = Digest::SHA1.file(params[:arquivo][:documento].tempfile.path)
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_arquivo
     @arquivo = Arquivo.find(params[:id])
@@ -68,6 +73,6 @@ class ArquivosController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def arquivo_params
-    params.require(:arquivo).permit(:sha1)
+    params.require(:arquivo).permit(:documento)
   end
 end
