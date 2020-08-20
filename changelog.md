@@ -2,7 +2,7 @@
 
 add modelo beneficiario
 add modelo loja
-
+update inflections
 
 ## v0.0.6
 
