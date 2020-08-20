@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'arquivos/new', type: :view do
   before do
-    assign(:arquivo, Arquivo.new())
+    assign(:arquivo, Arquivo.new)
   end
 
   it 'renders new arquivo form' do

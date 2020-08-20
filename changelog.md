@@ -1,6 +1,6 @@
 ## v0.0.6
 
-testes de modelo 
+testes de modelo
 
  * Usuario
  * Arquivo
@@ -15,6 +15,8 @@ tests view
   * arquivos/edit
   * arquivos/index
   * arquivos/new
+
+add indice unico para coluna sha1 na tabela arquivo
 
 ## v0.0.5
 
