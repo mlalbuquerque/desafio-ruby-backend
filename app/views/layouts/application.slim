@@ -12,6 +12,7 @@ html
       div
         div= image_tag  current_user.foto
         div= current_user.nome
+        div= link_to 'Lojas', lojas_path
         div
           = link_to  "Sair", sair_path
     = yield

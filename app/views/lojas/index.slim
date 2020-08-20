@@ -1,0 +1,10 @@
+table
+  th
+    tr = Loja.human_attribute_name(:id)
+    tr = Loja.human_attribute_name(:nome)
+    tr = Loja.human_attribute_name(:representante)
+  - @lojas.each do |loja|
+    tr
+      td = loja.id
+      td = loja.nome
+      td = loja.representante

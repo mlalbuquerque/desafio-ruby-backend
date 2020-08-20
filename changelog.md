@@ -1,3 +1,7 @@
+## v0.0.8
+
+add controler lojas
+
 ## v0.0.7
 
 add modelo beneficiario
