@@ -29,7 +29,7 @@ end
 
 group :development, :test do
   gem 'factory_bot_rails'
-  gem 'rspec'
   gem 'pry'
+  gem 'rspec'
   gem 'rspec-rails', '~> 4.0.0'
 end
