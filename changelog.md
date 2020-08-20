@@ -6,7 +6,8 @@ testes de modelo
 
 testes request
 
-  * Arquivo
+  * ArquivoController
+  * SessaoController
 
 ## v0.0.5
 
