@@ -1,0 +1,2 @@
+class Cartao < ApplicationRecord
+end
