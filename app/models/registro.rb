@@ -14,6 +14,10 @@ class Registro < ApplicationRecord
     end
   end
 
+  def value
+    valor * tipo_de_transacao.factor
+  end
+
   class << self
     private
 
