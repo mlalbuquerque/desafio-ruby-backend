@@ -1,5 +1,6 @@
 class ArquivosController < ApplicationController
   before_action :set_arquivo, only: %i[show edit update destroy]
+  after_action :process_arquive, only: %i[create]
 
   # GET /arquivos
   # GET /arquivos.json
@@ -62,6 +63,10 @@ class ArquivosController < ApplicationController
   end
 
   private
+
+  def process_arquive
+    ProcessArquive.perform_later(@arquivo.id) if @arquivo&.persisted?
+  end
 
   def set_sha1
     @arquivo.sha1_from_tempfile(params[:arquivo][:documento].tempfile) if params[:arquivo][:documento]
