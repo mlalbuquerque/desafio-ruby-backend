@@ -10,7 +10,7 @@ class ProcessArquive < ApplicationJob
     end
   end
 
-  def read_file
+  def process_file
     content = File.read(@file)
     lines = content.split("\n")
     @arquive.update linhas: lines.size
@@ -35,15 +35,13 @@ class ProcessArquive < ApplicationJob
 
   def process_arquive
     build_local_file
-    write_new_file_from_attached
-
+    process_file
     delete_tmp_files
   end
 
   def perform(arquive_id)
     @arquive = Arquivo.find arquive_id
     process_arquive
-    @arquive.documento.analyze
-    @video.update processed: true
+    @arquive.update data_processado: DateTime.now
   end
 end

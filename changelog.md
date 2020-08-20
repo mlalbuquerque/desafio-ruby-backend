@@ -10,7 +10,10 @@ add modelo registro
 add coluna data_processado na tabela arquivo para sinalizar quando aquele arquivo foi processado por completo
 add seed TipoDeTransacao
 add coluna linhas na tabela arquivo para registrar o tamanho do arquivo
-
+add CnabParser::Version01
+add job ProcessArquive
+add column data_processado to arquivo
+add callback to process_arquive after create arquive
 
 ## v0.0.6
 
