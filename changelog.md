@@ -13,6 +13,8 @@ testes request
 tests view
 
   * arquivos/edit
+  * arquivos/index
+  * arquivos/new
 
 ## v0.0.5
 
