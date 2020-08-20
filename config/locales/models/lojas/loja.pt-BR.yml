@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      loja:
+        one: Loja
+        other: Lojas
+    attributes:
+      loja:
+        id: Identificador
+        nome: Nome da loja
+        representante: Dono da loja
