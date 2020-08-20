@@ -4,6 +4,10 @@ testes de modelo
 
  * Usuario
 
+testes request
+
+  * Arquivo
+
 ## v0.0.5
 
 add login pelo google
