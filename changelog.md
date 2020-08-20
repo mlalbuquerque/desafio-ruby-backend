@@ -3,11 +3,16 @@
 testes de modelo 
 
  * Usuario
+ * Arquivo
 
 testes request
 
   * ArquivoController
   * SessaoController
+
+tests view
+
+  * arquivos/edit
 
 ## v0.0.5
 
