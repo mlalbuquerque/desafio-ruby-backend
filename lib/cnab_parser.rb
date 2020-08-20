@@ -44,7 +44,7 @@ module CnabParser
     end
 
     def beneficiario
-      Beneficiario.first_or_create(cpf: cpf)
+      Beneficiario.where(cpf: cpf).first_or_create
     end
 
     def numero_cartao
@@ -52,7 +52,7 @@ module CnabParser
     end
 
     def cartao
-      Cartao.first_or_create(numero: numero_cartao)
+      Cartao.where(numero: numero_cartao).first_or_create
     end
 
     def hora(zone = 'Brasilia')
@@ -69,7 +69,7 @@ module CnabParser
     end
 
     def loja
-      Loja.first_or_create(nome: nome_da_loja, representante: dono_da_loja)
+      Loja.where(nome: nome_da_loja, representante: dono_da_loja).first_or_create
     end
 
     def params
