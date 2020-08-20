@@ -63,7 +63,7 @@ class ArquivosController < ApplicationController
   private
 
   def set_sha1
-    @arquivo.sha1 = Digest::SHA1.file(params[:arquivo][:documento].tempfile.path)
+    @arquivo.sha1_from_tempfile(params[:arquivo][:documento].tempfile)
   end
 
   # Use callbacks to share common setup or constraints between actions.
