@@ -23,3 +23,8 @@ Metrics/MethodLength:
 Metrics/BlockLength:
   Exclude:
     - spec/**/*.rb
+RSpec/MultipleMemoizedHelpers:
+  Max: 8
+RSpec/AnyInstance:
+  Exclude:
+    - spec/requests/**/*

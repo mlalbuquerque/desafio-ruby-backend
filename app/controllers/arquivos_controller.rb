@@ -39,6 +39,7 @@ class ArquivosController < ApplicationController
   # PATCH/PUT /arquivos/1
   # PATCH/PUT /arquivos/1.json
   def update
+    set_sha1
     respond_to do |format|
       if @arquivo.update(arquivo_params)
         format.html { redirect_to @arquivo, notice: t(:modelo_atualizado, modelo: Arquivo) }
@@ -63,7 +64,7 @@ class ArquivosController < ApplicationController
   private
 
   def set_sha1
-    @arquivo.sha1_from_tempfile(params[:arquivo][:documento].tempfile)
+    @arquivo.sha1_from_tempfile(params[:arquivo][:documento].tempfile) if params[:arquivo][:documento]
   end
 
   # Use callbacks to share common setup or constraints between actions.
