@@ -46,20 +46,10 @@ RSpec.describe '/arquivos', type: :request do
         post arquivos_url, params: { arquivo: valid_attributes }
         expect(response).to redirect_to(entrar_path)
       end
-
-      it 'redirects to the created arquivo' do
-        post arquivos_url, params: { arquivo: valid_attributes }
-        expect(response).to redirect_to(entrar_path)
-      end
     end
 
     context 'with invalid parameters' do
       it 'does not create a new Arquivo' do
-        post arquivos_url, params: { arquivo: invalid_attributes }
-        expect(response).to redirect_to(entrar_path)
-      end
-
-      it "renders a successful response (i.e. to display the 'new' template)" do
         post arquivos_url, params: { arquivo: invalid_attributes }
         expect(response).to redirect_to(entrar_path)
       end
