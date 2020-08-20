@@ -1,6 +1,8 @@
 ## v0.0.7
 
 add modelo beneficiario
+add modelo loja
+
 
 ## v0.0.6
 
