@@ -3,6 +3,14 @@
 add modelo beneficiario
 add modelo loja
 update inflections
+add modelo cartão
+add modelo tipo_de_transacao
+inclui coluna linha_no_arquivo na tabela de registros, referenciando de onde examente o registro se originou
+add modelo registro
+add coluna data_processado na tabela arquivo para sinalizar quando aquele arquivo foi processado por completo
+add seed TipoDeTransacao
+add coluna linhas na tabela arquivo para registrar o tamanho do arquivo
+
 
 ## v0.0.6
 
