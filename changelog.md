@@ -1,3 +1,7 @@
+## v0.0.7
+
+add modelo beneficiario
+
 ## v0.0.6
 
 testes de modelo
