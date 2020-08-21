@@ -1,7 +1,13 @@
+## v0.0.9
+
+install codecov
+
 ## v0.0.8
 
 add controler lojas
+
 install bootstrap
+
 install decorator and add
 
   * arquivo
@@ -9,6 +15,7 @@ install decorator and add
   * registro
 
 map relationship registros on loja
+
 add method factor to TipoDeTransacao
 
 ## v0.0.7

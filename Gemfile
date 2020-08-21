@@ -29,8 +29,10 @@ group :development do
 end
 
 group :development, :test do
+  gem 'codecov'
   gem 'factory_bot_rails'
   gem 'pry'
   gem 'rspec'
   gem 'rspec-rails', '~> 4.0.0'
+  gem 'simplecov'
 end

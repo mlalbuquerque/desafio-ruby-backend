@@ -42,3 +42,4 @@ yarn-debug.log*
 
 db/schema.*
 .DS_Store
+coverage/*
