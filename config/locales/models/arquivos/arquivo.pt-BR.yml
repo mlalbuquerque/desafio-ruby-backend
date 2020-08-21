@@ -1,0 +1,14 @@
+pt-BR:
+  activerecord:
+    models:
+      arquivo:
+        one: Arquivo
+        other: Arquivo
+    attributes:
+      arquivo:
+        id: Identificador
+        sha1: Hash SHA1
+        name: Nome do arquivo
+        size: Tamanho do arquivo
+        linhas: Quantidade de linhas no arquivo
+        data_processado: Data de processamento
