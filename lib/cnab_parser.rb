@@ -55,9 +55,8 @@ module CnabParser
       Cartao.where(numero: numero_cartao).first_or_create
     end
 
-    def hora(zone = 'Brasilia')
-      offset = ActiveSupport::TimeZone[zone].formatted_offset
-      Time.strptime(@line[*@dict[:hora]] + offset, '%H%M%S%:z')
+    def hora(zone = 'Buenos Aires')
+      Time.parse_with_zone(@line[*@dict[:hora]], { zone: zone, format: '%H%M%S' })
     end
 
     def dono_da_loja
