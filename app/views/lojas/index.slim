@@ -1,10 +1,18 @@
 table.table
-  th
-    tr = Loja.human_attribute_name(:id)
-    tr = Loja.human_attribute_name(:nome)
-    tr = Loja.human_attribute_name(:representante)
+  tr
+    th = Loja.human_attribute_name(:id)
+    th = Loja.human_attribute_name(:nome)
+    th = Loja.human_attribute_name(:representante)
+    th = Loja.human_attribute_name(:in_arquives)
+    th = Loja.human_attribute_name(:operations)
+    th = Loja.human_attribute_name(:sum)
   - @lojas.each do |loja|
+    - loja = loja.decorate
     tr
-      td = loja.id
+      td = link_to "##{loja.id}", loja
       td = loja.nome
       td = loja.representante
+      td = loja.registros.map(&:arquivo_id).uniq.size
+      td = loja.registros.count
+      td class="#{loja.model.balance < 0 ? 'text-danger' : 'text-success'}"
+        = loja.balance
