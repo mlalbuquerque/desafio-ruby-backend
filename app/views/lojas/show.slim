@@ -1,0 +1,32 @@
+= @loja.registros.count
+center
+  h1 = @loja.nome
+  h3 = @loja.representante
+  h4 class="#{@loja.model.balance < 0 ? 'text-danger' : 'text-success'}"
+    = @loja.balance
+table.table
+  tr
+    th = Registro.human_attribute_name(:arquivo)
+    th = Registro.human_attribute_name(:linha_no_arquivo)
+    th = Registro.human_attribute_name(:data)
+    th = Registro.human_attribute_name(:hora)
+    th = Registro.human_attribute_name(:tipo_de_transacao)
+    th = Registro.human_attribute_name(:beneficiario)
+    th = Registro.human_attribute_name(:cartao)
+    th = Registro.human_attribute_name(:value)
+    th
+  - sum = 0
+  - @loja.registros.order(data: :desc, hora: :desc).each do |register|
+    - sum += register.value
+    - register = register.decorate
+    tr
+      td = register.arquivo.decorate.name
+      td = register.linha_no_arquivo
+      td = register.data
+      td = register.hora
+      td = register.tipo_de_transacao.descricao
+      td = register.beneficiario.cpf
+      td = register.cartao.numero
+      td = register.value
+      td class="#{sum < 0 ? 'text-danger' : 'text-success'}"
+        = number_to_currency sum

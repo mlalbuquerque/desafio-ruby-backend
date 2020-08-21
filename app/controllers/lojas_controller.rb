@@ -5,7 +5,9 @@ class LojasController < ApplicationController
     @lojas = Loja.all
   end
 
-  def show; end
+  def show
+    @loja = @loja.decorate
+  end
 
   private
 
