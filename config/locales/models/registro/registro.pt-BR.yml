@@ -1,0 +1,16 @@
+pt-BR:
+  activerecord:
+    models:
+      registro:
+        one: Registro
+        other: Registros
+    attributes:
+      registro:
+        arquivo: Arquivo
+        beneficiario: Beneficiário
+        cartao: Cartão utilizado
+        data: Data do registro
+        hora: hora do registro
+        linha_no_arquivo: Linha no arquivo
+        tipo_de_transacao: Tipo de transação
+        value: Valor da transação
