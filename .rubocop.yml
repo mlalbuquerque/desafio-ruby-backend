@@ -28,3 +28,5 @@ RSpec/MultipleMemoizedHelpers:
 RSpec/AnyInstance:
   Exclude:
     - spec/requests/**/*
+Metrics/AbcSize:
+  Max: 20

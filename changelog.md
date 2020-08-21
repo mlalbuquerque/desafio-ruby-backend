@@ -1,22 +1,44 @@
 ## v0.0.8
 
 add controler lojas
+install bootstrap
+install decorator and add
+
+  * arquivo
+  * loja
+  * registro
+
+map relationship registros on loja
+add method factor to TipoDeTransacao
 
 ## v0.0.7
 
 add modelo beneficiario
+
 add modelo loja
+
 update inflections
+
 add modelo cartão
+
 add modelo tipo_de_transacao
+
 inclui coluna linha_no_arquivo na tabela de registros, referenciando de onde examente o registro se originou
+
 add modelo registro
+
 add coluna data_processado na tabela arquivo para sinalizar quando aquele arquivo foi processado por completo
+
 add seed TipoDeTransacao
+
 add coluna linhas na tabela arquivo para registrar o tamanho do arquivo
+
 add CnabParser::Version01
+
 add job ProcessArquive
+
 add column data_processado to arquivo
+
 add callback to process_arquive after create arquive
 
 ## v0.0.6

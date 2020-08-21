@@ -1,0 +1,26 @@
+p#notice= notice
+h1 Arquivos
+table.table
+  thead
+    tr
+      th = Arquivo.human_attribute_name(:name)
+      th = Arquivo.human_attribute_name(:size)
+      th = Arquivo.human_attribute_name(:sha1)
+      th = Arquivo.human_attribute_name(:linhas)
+      th = Arquivo.human_attribute_name(:data_processado)
+      th colspan="3" 
+  tbody
+    - @arquivos.each do |arquivo|
+      - arquivo = arquivo.decorate
+      tr
+        td= arquivo.name
+        td= arquivo.size
+        td= arquivo.sha1
+        td= arquivo.linhas
+        td= arquivo.data_processado
+        td= link_to 'Show', arquivo
+        td= link_to 'Edit', edit_arquivo_path(arquivo)
+        td= link_to 'Destroy', arquivo, method: :delete, data: {confirm: 'Are you sure?'}
+br
+= link_to 'New Arquivo', new_arquivo_path
+
