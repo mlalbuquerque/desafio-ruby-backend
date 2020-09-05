@@ -1,0 +1,3 @@
+[submodule "projeto-desafio-ruby-backend"]
+	path = projeto-desafio-ruby-backend
+	url = https://github.com/costanonato/projeto-desafio-ruby-backend
