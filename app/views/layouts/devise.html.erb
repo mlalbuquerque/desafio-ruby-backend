@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <title><%= devise_page_title %></title>
+
+  <%= stylesheet_pack_tag 'devise/styles',
+                          'data-turbolinks-track': 'reload',
+                          media: 'all' %>
+  <%= javascript_pack_tag 'devise/scripts',
+                          'data-turbolinks-track': 'reload' %>
+
+  <%= favicon_link_tags %>
+</head>
+
+<body id="devise">
+  <main class="container">
+    <h1 class="h3 text-center"><%= app_name %></h1>
+
+    <%= yield %>
+  </main>
+</body>
+</html>

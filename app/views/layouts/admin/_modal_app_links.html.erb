@@ -1,0 +1,18 @@
+<div class="modal fade" id="modal-application-links" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="modal-application-links-label">
+          <%= app_name %>
+        </h6>
+
+        <button type="button" title="fechar" class="close" data-dismiss="modal">
+          <%= app_icon('times') %>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'layouts/admin/app_links', whos_call_me: 'modal' %>
+      </div>
+    </div>
+  </div>
+</div>

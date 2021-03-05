@@ -1,0 +1,30 @@
+scss_files:
+  - 'app/javascript/packs/**/{*.scss,*.css}'
+
+exclude:
+  - 'node_modules/**'
+
+linters:
+  IdSelector:
+    enabled: false
+
+  ImportantRule:
+    enabled: false
+
+  PropertySortOrder:
+    enabled: false
+
+  SelectorDepth:
+    enabled: false
+
+  SelectorFormat:
+    enabled: false
+
+  UrlFormat:
+    enabled: false
+
+  Indentation:
+    exclude:
+      - 'node_modules/**'
+    severity: warning
+    width: 2

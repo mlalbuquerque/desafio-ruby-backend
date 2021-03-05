@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e;
+
+source $(dirname "$0")/functions;
+
+ENV=$1;
+
+if [ "$ENV" != 'production' ] && [ "$ENV" != 'staging' ]; then
+  allow_commands bash staging,production;
+fi
+
+info_message Accessing the $ENV server...;
+execute heroku run bash -r $ENV;
+
+success_message The ${ENV} bash has been canceled.;

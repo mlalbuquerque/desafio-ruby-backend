@@ -1,0 +1,10 @@
+pt-BR:
+  layouts:
+    admin:
+      app_links:
+        update_user: Alterar meus dados
+        update_password: Alterar minha senha
+        sign_out: Sair
+        go_to_home: Ir para home
+      navbar:
+        sign_out: Sair

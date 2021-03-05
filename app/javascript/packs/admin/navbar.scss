@@ -1,0 +1,71 @@
+@import '../variables';
+
+// Navbar
+#navbar {
+  background-color: $navbar-bg-color !important;
+  box-shadow: 0 1px 1px $navbar-shadow-color !important;
+
+  .navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    color: $aside-color;
+    background-color: $aside-bg-color;
+    border-right: 3px solid $aside-border-color;
+    box-shadow: 0 1px 1px $aside-bg-color !important;
+
+    img {
+      max-width: 15px;
+      max-height: 15px;
+      margin-right: 7px;
+    }
+  }
+
+  .navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+  }
+
+  img {
+    max-height: 30px;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+
+  #hambuger-menu {
+    padding: 5px;
+  }
+
+  #bell-notifications .badge {
+    position: relative;
+    top: -10px;
+    left: -15px;
+    font-size: 10px;
+    font-weight: 100;
+  }
+
+  #bell-notifications .fa {
+    font-size: 20px;
+  }
+
+  #bell-notifications .material-icons {
+    font-size: 24px;
+  }
+
+  .form-control-dark {
+    color: $navbar-search-color;
+    background-color: $navbar-search-bg-color;
+    border-color: $navbar-search-bg-color;
+  }
+
+  .form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px $navbar-search-shadow-color;
+  }
+}

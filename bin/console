@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e;
+
+source $(dirname "$0")/functions;
+
+ENV=$1;
+
+if [ "$ENV" != 'production' ] && [ "$ENV" != 'staging' ]; then
+  allow_commands console staging,production;
+fi
+
+info_message Restarting $ENV server...;
+execute heroku run rails c -r $ENV;
+
+success_message The ${ENV} console has been canceled.;

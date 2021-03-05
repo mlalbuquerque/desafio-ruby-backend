@@ -74,3 +74,78 @@ Adicionalmente, tentaremos verificar a sua familiarização com as bibliotecas p
 ---
 
 Boa sorte!
+
+---
+
+## Requirements
+
+- Ruby 3.0.0
+- Rails 6.1.1
+
+## Installation
+
+#### Application
+
+```bash
+bin/setup
+```
+
+#### Database
+
+```bash
+bin/recreate_database
+```
+
+## Start application
+
+```bash
+bin/start
+```
+
+#### CI
+
+```bash
+bin/ci
+```
+
+#### Brakeman
+
+```bash
+bin/brakeman
+```
+
+#### Rubocop
+
+```bash
+bin/rubocop -D -E -S # to verify
+# or
+bin/rubocop -D -E -S --auto-correct # to verify and fix
+```
+
+#### ERB Lint
+
+```bash
+bin/erblint app/views # to verify
+# or
+bin/erblint app/views --autocorrect # to verify and fix
+```
+
+#### SCSS lint
+
+```bash
+bin/scss-lint # to verify
+```
+
+#### ESLint
+
+```bash
+bin/eslint # to verify
+# or
+bin/eslint --fix # to verify and fix
+```
+
+#### Rspec
+
+```bash
+bin/rspec
+```

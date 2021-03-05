@@ -1,0 +1,10 @@
+@import '../variables';
+
+@import 'bootstrap4-tagsinput/tagsinput';
+
+.bootstrap-tagsinput .badge {
+  margin: 1.5px;
+  padding: 5px 8px;
+  color: $aside-color;
+  background: $aside-bg-color;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <title><%= app_page_title %></title>
+
+  <%= stylesheet_pack_tag 'application/styles',
+                          'data-turbolinks-track': 'reload',
+                          media: 'all' %>
+  <%= javascript_pack_tag 'application/scripts',
+                          'data-turbolinks-track': 'reload' %>
+
+  <%= favicon_link_tags %>
+</head>
+
+<body>
+  <%= content_for :body_page_title %>
+
+  <%= flash_messages %>
+
+  <%= yield %>
+
+  <%= app_version %>
+</body>
+</html>

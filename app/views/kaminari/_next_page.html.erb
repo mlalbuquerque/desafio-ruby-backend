@@ -1,0 +1,9 @@
+<li class="page-item next">
+  <%= link_to_unless current_page.last?,
+                     t('views.pagination.next').html_safe,
+                     url,
+                     title: t('views.pagination.next'),
+                     class: 'page-link',
+                     remote: remote,
+                     rel: 'next' %>
+</li>

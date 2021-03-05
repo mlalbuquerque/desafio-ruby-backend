@@ -1,0 +1,17 @@
+<% content_for(:page_title, page_title) %>
+
+<% content_for :body_page_title do %>
+  <div id="body-page-title" class="row">
+    <div class="col-<%= defined?(link) ? '6 col-sm-5 col-md-8 col-lg-9' : 12 %>">
+      <h1 class="h5 text-truncate" title="<%= strip_tags page_title %>">
+        <%= page_title %>
+      </h1>
+    </div>
+
+    <% if defined?(link) %>
+      <div class="col-6 col-sm-7 col-md-4 col-lg-3 text-right">
+        <%= link %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

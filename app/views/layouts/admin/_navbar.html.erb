@@ -1,0 +1,29 @@
+<%= link_to admin_root_path, title: app_text_version,
+                             class: 'navbar-brand col-sm-4 col-md-3 col-lg-2
+                                     mr-0 text-truncate' do %>
+  <%= app_name %>
+<% end %>
+
+<div id="hambuger-menu" class="mr-auto float-left">
+  <%= image_tag 'logo.png', class: 'img-thumbnail' %>
+  <%= link_to_modal app_icon('bars'), '#modal-application-links',
+                    class: 'btn btn-sm btn-outline-application d-sm-none' %>
+</div>
+
+<div class="navbar-nav px-3">
+  <ul class="nav ">
+    <li class="nav-item">
+      <a id="bell-notifications" class="nav-link" href="#">
+        <%= app_icon('bell') %>
+        <span class="badge badge-pill badge-danger">9+</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <%= link_to destroy_user_session_path, class: 'nav-link',
+                                             method: :delete do %>
+        <%= app_icon_text('sign-out', t('.sign_out')) %>
+      <% end %>
+    </li>
+  </ul>
+</div>

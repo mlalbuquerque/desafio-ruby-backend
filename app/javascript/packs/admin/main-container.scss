@@ -1,0 +1,49 @@
+@import '../variables';
+
+#admin-container {
+  // background: url('/assets/bg.svg') no-repeat center center fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+  background-color: $container-bg-color;
+  height: calc(100vh);
+  margin-bottom: -100px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 80px;
+
+  // Container
+  #container {
+    padding-top: 60px;
+
+    #body-page-title {
+      color: $aside-bg-color;
+      border-bottom: 1px solid $aside-bg-color;
+      background: $container-bg-color;
+      padding-bottom: 5px;
+      padding-top: 15px;
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      left: 0;
+      top: 40px;
+    }
+
+    .container-content {
+      padding-top: 80px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  #admin-container {
+    padding-top: 20px;
+
+    #container {
+      #body-page-title {
+        padding-top: 40px;
+      }
+    }
+  }
+}

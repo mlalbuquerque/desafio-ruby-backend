@@ -1,0 +1,124 @@
+pt-BR:
+  boolean:
+    truly: 'Sim'
+    falsely: 'Não'
+
+  application:
+    name: ''
+    destroy_confirm_message: Tem certeza que deseja apagar?
+
+  bootstrap:
+    alert:
+      icons:
+        default: info-circle
+        info: info-circle
+        warning: exclamation-triangle
+        success: check
+        notice: check
+        danger: ban
+        error: ban
+      subtitles:
+        info: Informação
+        warning: Atenção
+        success: Sucesso
+        notice: Sucesso
+        danger: Erro
+        error: Erro
+      not_found: Nenhum registro foi encontrado
+      male:
+        not_found: Nenhum %{model} foi encontrado
+      female:
+        not_found: Nenhuma %{model} foi encontrada
+
+  menu:
+    default:
+      index: Listar
+      create: Criar
+      update: Editar
+      show: Mostrar
+      destroy: Apagar
+
+    links:
+      new: Adicionar %{model}
+      show: Ver
+      edit: Editar
+      destroy: Apagar
+      cancel: Cancelar
+      duplicate: Duplicar
+      back: Voltar
+
+    icons:
+      new: plus
+      show: eye
+      edit: pencil
+      destroy: trash
+      cancel: ban
+      duplicate: files-o
+      back: arrow-left
+
+  buttons:
+    cocoon:
+      add:
+        icon: plus
+        text: adicionar
+      remove:
+        icon: times
+        text: excluir
+
+  icons_alias:
+    arrow-down: arrow_downward
+    arrow-left: arrow_back
+    arrow-right: arrow_forward
+    arrow-up: arrow_upward
+    arrows-h: compare_arrows
+    ban: cancel
+    bars: menu
+    bell: notifications
+    calendar: today
+    calendar-o: today
+    calendar-check-o: event_available
+    calendar-times-o: event_busy
+    calendar-minus-o: date_range
+    camera: camera_enhance
+    check: done
+    check-square: check_box
+    minus-square: indeterminate_check_box
+    chevron-down: expand_more
+    chevron-right: chevron_right
+    chevron-up: expand_less
+    chevron-left: chevron_left
+    cog: settings
+    cogs: settings
+    comment: mode_comment
+    comments: question_answer
+    dollar: attach_money
+    envelope: email
+    eye: visibility
+    exclamation-triangle: report_problem
+    info-circle: info
+    hdd-o: save_alt
+    paperclip: attachment
+    files-o: file_copy
+    file-pdf-o: picture_as_pdf
+    list-alt: reorder
+    money: local_atm
+    pencil: edit
+    pencil-square: rate_review
+    pencil-square-o: edit_location
+    picture-o: insert_photo
+    plus: add
+    plus-circle: add_circle
+    plus-square: add_circle_outline
+    key: vpn_key
+    search: search
+    sign-in: exit_to_app
+    sign-out: power_settings_new
+    square-o: crop_square
+    ticket: local_activity
+    times: clear
+    trash: delete_sweep
+    trash-o: delete_sweep
+    upload: cloud_upload
+    user: person
+    user-plus: person_add
+    users: people

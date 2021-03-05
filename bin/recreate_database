@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e;
+
+source $(dirname "$0")/functions;
+
+info_message Recreating database...;
+execute bin/rails db:drop db:create db:migrate db:seed;
+
+success_message Database recreated successfully.;

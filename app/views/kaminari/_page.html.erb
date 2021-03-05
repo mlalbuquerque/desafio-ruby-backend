@@ -1,0 +1,17 @@
+<% if page.current? %>
+  <li class="page-item active">
+    <span class="page-link" title="<%= page %>">
+      <%= page %>
+      <span class="sr-only">(current)</span>
+    </span>
+  </li>
+<% else %>
+  <li class="page-item">
+    <%= link_to_unless page.current?,
+                       page,
+                       url,
+                       title: page,
+                       class: 'page-link',
+                       remote: remote %>
+  </li>
+<% end %>

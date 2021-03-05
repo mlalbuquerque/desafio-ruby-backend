@@ -1,0 +1,12 @@
+@import '../variables';
+
+footer {
+  background-color: $navbar-bg-color;
+  box-shadow: 0 -5px 5px -5px $navbar-shadow-color !important;
+  padding: 10px 15px;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}

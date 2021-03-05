@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -e;
+
+source $(dirname "$0")/functions;
+
+ENV=$1;
+
+if [ "$ENV" != 'production' ] && [ "$ENV" != 'staging' ]; then
+  allow_commands deploy staging,production;
+fi
+
+BRANCH=master;
+
+if [ "$ENV" == 'staging' ]; then
+  BRANCH=$(git rev-parse --abbrev-ref HEAD);
+fi
+
+info_message Deploying $ENV server...;
+execute git push $ENV $BRANCH:master;
+
+info_message Migrating $ENV database...;
+execute heroku run rails db:migrate -r $ENV;
+
+success_message ${ENV^} server deployed successfully.;

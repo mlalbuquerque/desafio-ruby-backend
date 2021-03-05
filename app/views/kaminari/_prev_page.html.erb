@@ -1,0 +1,9 @@
+<li class="page-item prev">
+  <%= link_to_unless current_page.first?,
+                     t('views.pagination.previous').html_safe,
+                     url,
+                     title: t('views.pagination.previous'),
+                     class: 'page-link',
+                     remote: remote,
+                     rel: 'prev' %>
+</li>

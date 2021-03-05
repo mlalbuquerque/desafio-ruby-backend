@@ -1,0 +1,27 @@
+<% content_for(:page_title, 'Entrar') %>
+
+<div id="signin" class="text-center">
+  <%= simple_form_for(resource,
+                      as: resource_name,
+                      url: session_path(resource_name),
+                      wrapper: :floating_labels_form,
+                      html: { class: 'form-signin' }) do |f| %>
+
+    <%= f.error_notification %>
+
+    <%= f.input :email, required: false,
+                        autofocus: true,
+                        label: false,
+                        placeholder: 'E-MAIL' %>
+
+    <%= f.input :password, required: false,
+                           label: false,
+                           placeholder: 'SENHA' %>
+
+    <div class="submit">
+      <%= f.submit 'ENTRAR', class: 'btn btn-lg btn-block btn-primary' %>
+    </div>
+
+    <%= render 'devise/shared/links' %>
+  <% end %>
+</div>

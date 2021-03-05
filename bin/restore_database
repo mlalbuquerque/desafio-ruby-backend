@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+set -e;
+
+source $PWD/bin/functions
+
+ENV=$1;
+
+if [ "$ENV" != 'local' ] && [ "$ENV" != 'staging' ] && [ "$ENV" != 'production' ]; then
+  allow_commands restore_database local,staging,production;
+fi
+
+info_message Getting application database name...
+DB_NAME=$(rails r 'puts ActiveRecord::Base.connection.current_database');
+DB_FILE=db/dumps/$DB_NAME.sql;
+
+if [ "$ENV" != 'local' ]; then
+  FILE_REMOTE_URL="db/dumps/DB_${ENV^^}_URL";
+
+  if [ -f $FILE_REMOTE_URL ]; then
+    REMOTE_URL=$(cat $FILE_REMOTE_URL);
+  else
+    REMOTE_URL=$(heroku config:get DATABASE_URL -r $ENV);
+    echo $REMOTE_URL > $FILE_REMOTE_URL;
+  fi
+
+  info_message Generating $ENV dump...;
+  execute pg_dump --clean --no-acl --no-owner $REMOTE_URL --file=$DB_FILE;
+fi
+
+info_message Restoring local database...;
+execute psql --username=$(id -un) --dbname=$DB_NAME --file=$DB_FILE;
+
+info_message Running migrations...;
+execute rails db:migrate;
+
+success_message Database was successfully imported from ${ENV} the server.;
