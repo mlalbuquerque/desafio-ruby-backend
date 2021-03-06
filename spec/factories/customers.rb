@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :customer do
-    name { 'MyString' }
-    ssn { 'MyString' }
+    name { Faker::Company.bs }
+    ssn { Faker::CPF.numeric }
   end
 end

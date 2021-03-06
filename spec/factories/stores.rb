@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :store do
-    name { 'MyString' }
-    responsible_name { 'MyString' }
+    name { Faker::Company.bs }
+    responsible_name { Faker::Name.unique.name }
   end
 end

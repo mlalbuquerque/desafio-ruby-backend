@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      financial_entry:
+        one: 'Impotação'
+        other: 'Impotações'
+    attributes:
+      financial_entry:
+        user: 'Usuário'
+        user_id: 'Usuário'
+        content_file: 'Arquivo'

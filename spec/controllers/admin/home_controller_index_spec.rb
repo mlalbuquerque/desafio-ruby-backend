@@ -21,7 +21,7 @@ module Admin
 
       it 'has a page title' do
         expect(response.body)
-          .to have_css('h1', text: t('admin.home.index.title'))
+          .to have_css('h1', text: h.tmp(Transaction))
       end
     end
   end

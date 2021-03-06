@@ -2,10 +2,11 @@
 
 FactoryBot.define do
   factory :transaction do
-    credit_card { nil }
-    store { nil }
-    kind { 'MyString' }
-    occurred_at { '2021-03-05 23:33:15' }
-    amount { '9.99' }
+    user
+    credit_card
+    store
+    kind factory: :transaction_kind
+    occurred_at { Faker::Date.between(from: 2.days.ago, to: Date.current) }
+    amount { Faker::Number.decimal(l_digits: 3, r_digits: 2) }
   end
 end

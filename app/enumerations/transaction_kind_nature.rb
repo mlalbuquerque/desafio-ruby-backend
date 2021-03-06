@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class TransactionKindNature < EnumerateIt::Base
+class TransactionKindNature < ApplicationEnumeration
   associate_values :credit, :debit
 end

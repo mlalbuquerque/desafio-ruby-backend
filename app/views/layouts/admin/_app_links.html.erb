@@ -32,8 +32,8 @@
     <%= app_icon_text('home', t('.go_to_home')) %>
   <% end %>
 
-  <%= aside_link_to '#', class: 'item-large' do %>
-    <%= app_icon_text('users', tmp(User)) %>
+  <%= aside_link_to admin_root_path, class: 'item-large' do %>
+    <%= app_icon_text('exchange', tmp(Transaction)) %>
     <%= bs_badge_danger('Beta') %>
   <% end %>
 
@@ -43,9 +43,7 @@
     <%= app_icon('plus') %>
   </h6>
 
-  <%= aside_link_to '#', class: 'active' do %>
-    <%= app_icon_text('calendar-check-o', 'Deste mês') %>
+  <%= aside_link_to admin_financial_entries_path do %>
+    <%= app_icon_text('upload', tmp(FinancialEntry)) %>
   <% end %>
-
-  <%= aside_link_to app_icon_text('calendar', 'Mês passado'), '#' %>
 </div>

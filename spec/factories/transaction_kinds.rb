@@ -2,8 +2,8 @@
 
 FactoryBot.define do
   factory :transaction_kind do
-    code { 'MyString' }
-    description { 'MyString' }
-    nature { 'MyString' }
+    code { Faker::Code.ean }
+    description { Faker::Lorem.word }
+    nature { TransactionKindNature.sample }
   end
 end

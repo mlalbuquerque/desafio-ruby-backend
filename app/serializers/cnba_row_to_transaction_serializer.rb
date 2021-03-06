@@ -31,7 +31,7 @@ class CNBARowToTransactionSerializer < ApplicationSerializer
   end
 
   attribute :occurred_at do
-    Time.parse("#{object[OCCURRED_DATE_RANGE]} #{object[OCCURRED_HOUR_RANGE]}")
+    Time.zone.parse("#{object[OCCURRED_DATE_RANGE]} #{object[OCCURRED_HOUR_RANGE]}")
   end
 
   attribute :amount do

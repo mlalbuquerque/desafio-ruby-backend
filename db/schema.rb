@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_06_023315) do
+ActiveRecord::Schema.define(version: 2021_03_06_145014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 2021_03_06_023315) do
     t.string "ssn"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "financial_entries", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.text "content_file"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.uuid "user_id", null: false
+    t.index ["user_id"], name: "index_financial_entries_on_user_id"
   end
 
   create_table "stores", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -56,9 +64,11 @@ ActiveRecord::Schema.define(version: 2021_03_06_023315) do
     t.decimal "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.uuid "user_id", null: false
     t.index ["credit_card_id"], name: "index_transactions_on_credit_card_id"
     t.index ["kind_id"], name: "index_transactions_on_kind_id"
     t.index ["store_id"], name: "index_transactions_on_store_id"
+    t.index ["user_id"], name: "index_transactions_on_user_id"
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -76,7 +86,9 @@ ActiveRecord::Schema.define(version: 2021_03_06_023315) do
   end
 
   add_foreign_key "credit_cards", "customers"
+  add_foreign_key "financial_entries", "users"
   add_foreign_key "transactions", "credit_cards"
   add_foreign_key "transactions", "stores"
   add_foreign_key "transactions", "transaction_kinds", column: "kind_id"
+  add_foreign_key "transactions", "users"
 end

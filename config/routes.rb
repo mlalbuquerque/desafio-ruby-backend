@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'home#index'
+
+    resources :financial_entries, only: [:index, :new, :create]
   end
 end

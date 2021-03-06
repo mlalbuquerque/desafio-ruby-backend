@@ -9,4 +9,9 @@ module ApplicationHelper
   def handle_type(type)
     ALIAS_TYPES[type] || type
   end
+
+  def translate_model_name(model, count = 1)
+    model.model_name.human(count: count)
+  end
+  alias tm translate_model_name
 end

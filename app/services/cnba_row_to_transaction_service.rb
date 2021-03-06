@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 class CNBARowToTransactionService < ApplicationService
-  def initialize(row)
+  delegate :errors, to: :transaction
+
+  def initialize(row, user_id)
     @row = row
+    @user_id = user_id
   end
 
   def perform
@@ -20,7 +23,7 @@ class CNBARowToTransactionService < ApplicationService
   def transaction_params
     { occurred_at: serialized_transaction[:occurred_at],
       amount: serialized_transaction[:amount], credit_card_id: credit_card.id,
-      kind_id: kind.id, store_id: store.id }
+      kind_id: kind.id, store_id: store.id, user_id: user_id }
   end
 
   def kind
@@ -56,5 +59,5 @@ class CNBARowToTransactionService < ApplicationService
     @serialized_transaction ||= CNBARowToTransactionSerializer.new(row).as_json
   end
 
-  attr_reader :row, :transaction
+  attr_reader :row, :user_id, :transaction
 end
