@@ -2,7 +2,7 @@ pt-BR:
   activerecord:
     models:
       financial_entry:
-        one: 'Impotação'
+        one: 'Importação'
         other: 'Impotações'
     attributes:
       financial_entry:
