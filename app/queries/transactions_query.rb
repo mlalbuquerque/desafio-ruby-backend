@@ -6,7 +6,13 @@ class TransactionsQuery < ApplicationQuery
   end
 
   def includes
-    @relation = relation.includes(:kind, :store, :credit_card, :customer, :user)
+    @relation = relation.includes(:kind, :store, :credit_card, :customer)
+
+    self
+  end
+
+  def user_includes
+    @relation = relation.includes(:user)
 
     self
   end

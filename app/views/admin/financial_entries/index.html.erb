@@ -17,7 +17,7 @@
             <% @financial_entries.each do |entry| %>
               <tr>
                 <td>
-                  <div><%= entry.user_name.presence %></div>
+                  <div class="mb-2"><%= entry.user_name.presence %></div>
                   <div><code><%= entry.content_file %></code></div>
                   <small><%= entry.created_date %></small>
                 </td>

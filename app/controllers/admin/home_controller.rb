@@ -9,7 +9,7 @@ module Admin
     private
 
     def query
-      @query ||= TransactionsQuery.new
+      @query ||= TransactionsQuery.new.user_includes
     end
   end
 end
