@@ -1,0 +1,19 @@
+pt-BR:
+  activerecord:
+    models:
+      transaction:
+        one: 'Transação'
+        other: 'Transações'
+    attributes:
+      transaction:
+        credit_card: 'Cartão'
+        credit_card_id: 'Cartão'
+        store: 'Loja'
+        store_id: 'Loja'
+        user: 'Usuário'
+        user_id: 'Usuário'
+        kind: 'Tipo da transação'
+        kind_id: 'Tipo da transação'
+        occurred_at: 'Data da ocorrência'
+        amount: 'Valor'
+        customer: 'Cliente'

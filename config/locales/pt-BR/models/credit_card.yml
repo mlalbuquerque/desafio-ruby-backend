@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      credit_card:
+        one: 'Cartão de crédito'
+        other: 'Cartão de crédito'
+    attributes:
+      credit_card:
+        customer_id: 'Cliente'
+        customer: 'Cliente'
+        number: 'Número do cartão'

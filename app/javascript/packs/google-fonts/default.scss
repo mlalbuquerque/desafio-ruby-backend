@@ -24,3 +24,10 @@ body {
     margin: 10px 20px 20px 0;
   }
 }
+
+table {
+  td,
+  th {
+    vertical-align: middle !important;
+  }
+}

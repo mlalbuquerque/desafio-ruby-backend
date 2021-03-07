@@ -84,6 +84,8 @@ Boa sorte!
 
 ## Installation
 
+https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04-pt
+
 #### Application
 
 ```bash

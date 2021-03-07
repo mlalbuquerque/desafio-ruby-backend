@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      store:
+        one: 'Loja'
+        other: 'Loja'
+    attributes:
+      store:
+        name: 'Nome'
+        responsible_name: 'Nome do representante'

@@ -20,12 +20,44 @@
 </head>
 
 <body>
-  <%= content_for :body_page_title %>
+  <div class="mb-5">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#"><%= app_name %></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <%= flash_messages %>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <% if current_user.manager? %>
+            <li class="nav-item active">
+              <%= link_to 'IR PARA ADMINISTRAÇÃO', admin_root_path, class: 'nav-link' %>
+            </li>
+          <% end %>
 
-  <%= yield %>
+          <li class="nav-item active">
+            <%= link_to destroy_user_session_path, class: 'nav-link',
+                                                   method: :delete do %>
+              <%= app_icon_text('sign-out', 'Sair') %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </nav> <br>
+  </div>
 
-  <%= app_version %>
+  <main role="main" class="container mt-5">
+    <%= content_for :body_page_title %>
+
+    <%= flash_messages %>
+
+    <%= yield %>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <%= app_version %>
+    </div>
+  </footer>
 </body>
 </html>

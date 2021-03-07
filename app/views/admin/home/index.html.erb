@@ -1,1 +1,7 @@
-<%= render 'shared/body_page_title', page_title: t('.title') %>
+<%= render 'shared/index_title', resource: Transaction %>
+
+<div class="text-right mb-4">
+  <%= link_to_new(FinancialEntry, new_admin_financial_entry_path) %>
+</div>
+
+<%= render 'transactions/index', transactions: @transactions, show_user: true %>
