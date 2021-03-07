@@ -29,6 +29,12 @@
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
+          <% if current_user.manager? %>
+            <li class="nav-item active">
+              <%= link_to 'IR PARA ADMINISTRAÇÃO', admin_root_path, class: 'nav-link' %>
+            </li>
+          <% end %>
+
           <li class="nav-item active">
             <%= link_to destroy_user_session_path, class: 'nav-link',
                                                    method: :delete do %>

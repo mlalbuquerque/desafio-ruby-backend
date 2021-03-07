@@ -13,13 +13,6 @@
 <div class="navbar-nav px-3">
   <ul class="nav ">
     <li class="nav-item">
-      <a id="bell-notifications" class="nav-link" href="#">
-        <%= app_icon('bell') %>
-        <span class="badge badge-pill badge-danger">9+</span>
-      </a>
-    </li>
-
-    <li class="nav-item">
       <%= link_to destroy_user_session_path, class: 'nav-link',
                                              method: :delete do %>
         <%= app_icon_text('sign-out', t('.sign_out')) %>
