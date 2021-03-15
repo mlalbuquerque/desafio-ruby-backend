@@ -11,8 +11,8 @@ class ImportCNBAFileService < ApplicationService
   def perform
     return self unless financial_entry.save
 
-    file_rows.each do |row|
-      service = CNBARowToTransactionService.call(row, financial_entry.user_id)
+    financial_entry.content_file.each_line do |line|
+      service = CNBARowToTransactionService.call(line, financial_entry.user_id)
 
       @errors << service.errors unless service.success?
     end
@@ -22,9 +22,5 @@ class ImportCNBAFileService < ApplicationService
 
   def success?
     financial_entry.persisted? && @errors.empty?
-  end
-
-  def file_rows
-    @file_rows ||= financial_entry.content_file.lines.map(&:strip)
   end
 end
