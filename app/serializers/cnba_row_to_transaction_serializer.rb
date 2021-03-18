@@ -23,11 +23,11 @@ class CNBARowToTransactionSerializer < ApplicationSerializer
   end
 
   attribute :store_responsible_name do
-    object[STORE_RESPONSIBLE_NAME_RANGE].strip
+    object[STORE_RESPONSIBLE_NAME_RANGE].to_s.strip
   end
 
   attribute :store_name do
-    object[STORE_NAME_RANGE].strip
+    object[STORE_NAME_RANGE].to_s.strip
   end
 
   attribute :occurred_at do

@@ -7,7 +7,7 @@ FactoryBot.define do
 
     trait :invalid do
       user_id { nil }
-      content_file { nil }
+      content_file { '' }
     end
 
     factory :invalid_financial_entry, traits: [:invalid]

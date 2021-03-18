@@ -23,7 +23,7 @@ class CNBARowToTransactionService < ApplicationService
   def transaction_params
     { occurred_at: serialized_transaction[:occurred_at],
       amount: serialized_transaction[:amount], credit_card_id: credit_card.id,
-      kind_id: kind.id, store_id: store.id, user_id: user_id }
+      kind_id: kind&.id, store_id: store.id, user_id: user_id }
   end
 
   def kind
