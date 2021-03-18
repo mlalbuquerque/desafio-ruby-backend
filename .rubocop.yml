@@ -1,0 +1,49 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+Lint/MissingSuper:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Layout/LineLength:
+  Exclude:
+    - config/initializers/**/*
+    - config/environments/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - config/routes.rb
+    - config/initializers/**/*
+    - config/environments/**/*
+    - spec/controllers/**/*
+    - spec/factories/**/*
+    - spec/support/shared_contexts/**/*
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.6
+  Exclude:
+    - Rakefile
+    - bin/**/*
+    - db/migrate/**/*
+    - db/schema.rb
+    - db/seeds.rb
+    - db/seeds/**/*
+    - vendor/**/*
+    - node_modules/**/*

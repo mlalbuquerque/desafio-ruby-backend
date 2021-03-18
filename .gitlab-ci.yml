@@ -1,0 +1,46 @@
+stages:
+  - test
+  - deploy
+
+specs:
+  stage: test
+  image: registry.gitlab.com/interage/docker-hub/ruby-for-rails-6:2.6.6
+  cache:
+    paths:
+      - vendor/ruby
+      - node_modules
+  services:
+    - postgres:11.6-alpine
+  variables:
+    TZ: 'America/Recife'
+    NODE_ENV: test
+    RAILS_ENV: test
+    DATABASE_HOST: postgres
+  before_script:
+    - ruby --version
+    - bin/bundle --version
+    - bin/bundle install --path vendor
+    - node --version
+    - bin/yarn --version
+    - bin/rails yarn:install webpacker:compile
+  script:
+    - bin/ci
+
+packaging:
+  stage: deploy
+  image: docker:stable
+  only:
+    - tags
+  services:
+    - docker:dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_DRIVER: overlay
+  script:
+    - LATEST_IMAGE_TAG="$CI_REGISTRY_IMAGE:latest"
+    - CURRENT_IMAGE_TAG="$CI_REGISTRY_IMAGE:$(echo $CI_COMMIT_SHA | cut -c -8)"
+    - docker pull $LATEST_IMAGE_TAG || true
+    - docker build --cache-from $LATEST_IMAGE_TAG -t $CURRENT_IMAGE_TAG -t $LATEST_IMAGE_TAG .
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+    - docker push $CURRENT_IMAGE_TAG
+    - docker push $LATEST_IMAGE_TAG

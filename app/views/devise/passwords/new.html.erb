@@ -1,0 +1,27 @@
+<% content_for(:page_title, 'Esqueci a senha') %>
+
+<div id="signin" class="text-center">
+  <%= simple_form_for(resource, as: resource_name,
+                                url: password_path(resource_name),
+                                html: { method: :post,
+                                        class: 'form-signin' }) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :email,
+                  as: :string,
+                  label: false,
+                  required: true,
+                  autofocus: true,
+                  placeholder: 'E-MAIL',
+                  input_html: { autocomplete: 'off' } %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit 'ENVIAR INSTRUÇÕES',
+                   class: 'btn btn-lg btn-block btn-primary' %>
+    </div>
+
+    <%= render 'devise/shared/links' %>
+  <% end %>
+</div>

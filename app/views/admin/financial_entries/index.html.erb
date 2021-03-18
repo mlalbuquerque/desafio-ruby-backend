@@ -1,0 +1,33 @@
+<%= render 'shared/index_title_add', resource: FinancialEntry,
+                                     url: new_admin_financial_entry_path %>
+
+<% if @financial_entries.empty? %>
+  <%= bs_alert_info('Nenhuma transação foi encontrada') %>
+<% else %>
+  <div class="card">
+    <div class="card-body">
+      <div class="card-text">
+        <table class="mb-0 table table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th><%= tmp(FinancialEntry) %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @financial_entries.each do |entry| %>
+              <tr>
+                <td>
+                  <div class="mb-2"><%= entry.user_name.presence %></div>
+                  <div><code><%= entry.content_file %></code></div>
+                  <small><%= entry.created_date %></small>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <%= pagination_links(@financial_entries) %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,99 @@
+@import '../variables';
+
+@import 'select2/dist/css/select2';
+@import 'select2-bootstrap4-theme/dist/select2-bootstrap4';
+
+.select2-container--bootstrap4 {
+  .select2-results__option--highlighted[aria-selected] {
+    color: $aside-color;
+    background: $aside-bg-color;
+  }
+
+  .select2-selection--single {
+    padding: .65em 12px !important;
+  }
+
+  .select2-selection--multiple {
+    .select2-selection__rendered {
+      padding: 5px;
+    }
+
+    .select2-selection__choice {
+      margin: 2px;
+      padding: 5px 4px 3px 9px;
+      border-radius: 15px;
+      color: $aside-color;
+      border-color: $aside-active-color;
+      background: $aside-bg-color;
+    }
+
+    .select2-selection__choice__remove {
+      padding: 0 5px 0 3px;
+      color: $aside-color;
+      background: $aside-active-bg-color;
+      border-radius: 7px;
+      margin: 1px 0 1px 4px;
+      float: right;
+    }
+
+    .select2-selection__choice__remove:hover {
+      color: $aside-active-color;
+      background: $aside-active-bg-color;
+      border-color: $aside-active-bg-color;
+    }
+
+    .select2-search--inline .select2-search__field {
+      margin-top: 5px;
+    }
+  }
+}
+
+.form-group-valid {
+  .select2-dropdown,
+  .select2-selection {
+    border-color: $select2-valid-border-color;
+  }
+
+  .select2-container--focus .select2-selection,
+  .select2-container--open .select2-selection {
+    border-color: $select2-valid-active-border-color;
+  }
+
+  .select2-container--focus .select2-selection:focus,
+  .select2-container--open .select2-selection:focus {
+    box-shadow: 0 0 0 .2rem $select2-valid-shadow-border-color;
+  }
+
+  &.select2-drop-active {
+    border-color: $select2-valid-active-border-color;
+
+    &.select2-drop.select2-drop-above {
+      border-top-color: $select2-valid-active-border-color;
+    }
+  }
+}
+
+.form-group-invalid {
+  .select2-dropdown,
+  .select2-selection {
+    border-color: $select2-invalid-border-color;
+  }
+
+  .select2-container--focus .select2-selection,
+  .select2-container--open .select2-selection {
+    border-color: $select2-invalid-active-border-color;
+  }
+
+  .select2-container--focus .select2-selection:focus,
+  .select2-container--open .select2-selection:focus {
+    box-shadow: 0 0 0 .2rem $select2-invalid-shadow-border-color;
+  }
+
+  &.select2-drop-active {
+    border-color: $select2-invalid-active-border-color;
+
+    &.select2-drop.select2-drop-above {
+      border-top-color: $select2-invalid-active-border-color;
+    }
+  }
+}

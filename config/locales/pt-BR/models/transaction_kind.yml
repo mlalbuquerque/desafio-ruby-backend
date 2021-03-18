@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      transaction_kind:
+        one: 'Transação'
+        other: 'Transações'
+    attributes:
+      transaction_kind:
+        code: 'Código'
+        description: 'Descrição'
+        nature: 'Natureza'

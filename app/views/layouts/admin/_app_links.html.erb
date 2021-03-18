@@ -1,0 +1,49 @@
+<div id="<%= whos_call_me %>-app-links">
+  <a class="list-group-item" href="#<%= whos_call_me %>-current-user" data-toggle="collapse">
+    <div class="d-flex justify-content-start align-items-center">
+      <%= gravatar_image_tag(
+            current_user.email,
+            class: 'rounded-circle user-avatar img-thumbnail'
+          ) %>
+
+      <span class="menu-collapsed text-truncate"><%= current_user.name %></span>
+
+      <%= app_icon('chevron-down', class: 'ml-auto') %>
+    </div>
+  </a>
+
+  <div id="<%= whos_call_me %>-current-user"
+       data-parent="#<%= whos_call_me %>-app-links"
+       class="sidebar-submenu collapse">
+    <%= aside_link_to '#' do %>
+      <%= app_icon_text('cogs', t('.update_user')) %>
+    <% end %>
+
+    <%= aside_link_to '#' do %>
+      <%= app_icon_text('key', t('.update_password')) %>
+    <% end %>
+
+    <%= aside_link_to destroy_user_session_path, method: :delete do %>
+      <%= app_icon_text('sign-out', t('.sign_out')) %>
+    <% end %>
+  </div>
+
+  <%= aside_link_to admin_root_path, class: 'list-group-item' do %>
+    <%= app_icon_text('home', t('.go_to_home')) %>
+  <% end %>
+
+  <%= aside_link_to admin_root_path, class: 'item-large' do %>
+    <%= app_icon_text('exchange', tmp(Transaction)) %>
+    <%= bs_badge_danger('Beta') %>
+  <% end %>
+
+  <h6 class="sidebar-heading d-flex justify-content-between
+             align-items-center px-3 mt-4 mb-1">
+    <span>Relatótio do mês</span>
+    <%= app_icon('plus') %>
+  </h6>
+
+  <%= aside_link_to admin_financial_entries_path do %>
+    <%= app_icon_text('upload', tmp(FinancialEntry)) %>
+  <% end %>
+</div>

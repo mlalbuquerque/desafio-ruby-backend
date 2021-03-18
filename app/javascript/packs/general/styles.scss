@@ -1,0 +1,24 @@
+@import '../variables';
+
+@import 'titles';
+@import 'version';
+
+body {
+  background: $container-bg-color;
+  color: $container-text-color;
+  font-size: $default-font-size;
+  overflow-x: hidden;
+  margin-right: 0;
+  margin-left: 0;
+
+  .btn-outline-application {
+    color: $aside-bg-color;
+    border-color: $aside-bg-color;
+
+    &:hover {
+      color: $aside-heading-color;
+      background-color: $aside-bg-color;
+      border-color: $aside-bg-color;
+    }
+  }
+}

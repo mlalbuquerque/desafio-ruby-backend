@@ -1,0 +1,9 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import 'pagination';
+
+body {
+  .invalid-feedback {
+    display: block;
+  }
+}

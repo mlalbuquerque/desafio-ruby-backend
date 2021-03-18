@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+execute() { execute_message $@; $@; }
+
+execute_message() { message "\e[1;36m$ $@\e[0m"; }
+
+success_message() { message "\n\e[1;32m> $@\e[0m"; }
+
+info_message() { message "\e[1;34m> $@\e[0m"; }
+
+message() { echo -e $@; }
+
+allow_commands() {
+  COMMAND=$1;
+  ENVIRONMENTS=$(echo $2 | tr "," "\n");
+
+  declare -i i=0;
+  for ENVIRONMENT in $ENVIRONMENTS; do
+    i=$(( i + 1 ));
+    OPTIONS[$i]="bin/$COMMAND $ENVIRONMENT";
+  done
+
+  info_message Use one of the commands below:;
+  for OPTION in "${!OPTIONS[@]}"; do
+    message - [$OPTION] "\e[1;36m$ ${OPTIONS[$OPTION]}\e[0m";
+  done
+
+  while [ "${OPTIONS[$NUMBER_COMMAND]}" == '' ]; do
+    read -ep 'Enter the command number: ' NUMBER_COMMAND;
+  done
+
+  ${OPTIONS[$NUMBER_COMMAND]};
+
+  exit;
+}

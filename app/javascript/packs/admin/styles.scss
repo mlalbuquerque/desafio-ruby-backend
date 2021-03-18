@@ -1,0 +1,16 @@
+// Preload
+@import '../preload';
+
+// From yarn
+@import '../bootstrap-datepicker/datepicker';
+@import '../bootstrap-input-tags/input-tags';
+@import '../select2/select2';
+
+// From gems
+@import '../cocoon/styles';
+
+// From admin layout
+@import 'navbar';
+@import 'main-container';
+@import 'aside';
+@import 'footer';

@@ -1,0 +1,14 @@
+pt-BR:
+  shared:
+    edit_title:
+      title: Editar %{model}
+    index_title:
+      title: Lista de %{model}
+    index_title_add:
+      title: Lista de %{model}
+    new_title:
+      title: Adicionar %{model}
+    show_title:
+      title:
+        male: Detalhes do %{model}
+        female: Detalhes da %{model}

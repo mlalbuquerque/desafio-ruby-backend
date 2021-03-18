@@ -1,0 +1,49 @@
+<% if transactions.empty? %>
+  <%= bs_alert_info('Nenhuma transação foi encontrada') %>
+<% else %>
+  <div class="card">
+    <div class="card-body">
+      <div class="card-text">
+        <table class="mb-0 table table-hover">
+          <thead class="thead-light">
+            <tr>
+              <% if defined?(show_user) %>
+                <th><%= ta(Transaction, :user) %></th>
+              <% end %>
+              <th><%= ta(Transaction, :kind) %></th>
+              <th><%= ta(Transaction, :store) %></th>
+              <th><%= ta(Transaction, :amount) %></th>
+              <th><%= ta(Transaction, :customer) %></th>
+              <th><%= ta(Transaction, :occurred_at) %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% transactions.each do |transaction| %>
+              <tr>
+                <% if defined?(show_user) %>
+                  <td><%= transaction.user_name %></td>
+                <% end %>
+                <td>
+                  <div><%= transaction.kind_description %></div>
+                  <small><%= transaction.kind_nature_humanize %></small>
+                </td>
+                <td>
+                  <div><%= transaction.store_name %></div>
+                  <small><%= transaction.store_responsible_name %></small>
+                </td>
+                <td>
+                  <div><%= transaction.formatted_amount %></div>
+                  <small><%= transaction.credit_card_number %></small>
+                </td>
+                <td><%= transaction.customer_ssn %></td>
+                <td><%= transaction.occurred_date %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <%= pagination_links(transactions) %>
+      </div>
+    </div>
+  </div>
+<% end %>

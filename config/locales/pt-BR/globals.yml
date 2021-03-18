@@ -1,0 +1,17 @@
+pt-BR:
+  controllers:
+    create:
+      success: Criado com sucesso
+      error: Erro ao tentar criar
+    update:
+      success: Alterado com sucesso
+      error: Erro ao tentar alterar
+    duplicate:
+      success: Duplicado com sucesso
+      error: Erro ao tentar duplicar
+    destroy:
+      success: Excluído com sucesso
+      error: Erro ao tentar excluir
+    ordinate:
+      success: Ordenado com sucesso
+      error: Erro ao tentar ordenar

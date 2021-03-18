@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <title><%= admin_page_title %></title>
+
+  <%= stylesheet_pack_tag 'admin/styles',
+                          'data-turbolinks-track': 'reload',
+                          media: 'all' %>
+  <%= javascript_pack_tag 'admin/scripts',
+                          'data-turbolinks-track': 'reload' %>
+
+  <%= favicon_link_tags %>
+</head>
+
+<body class="bg-light">
+  <nav id="navbar" class="navbar navbar-light fixed-top flex-md-nowrap p-0 shadow text-nowrap">
+    <%= render 'layouts/admin/navbar' %>
+  </nav>
+
+  <main id="admin-container" class="container-fluid">
+    <div class="row">
+      <aside id="sidebar" class="bg-light col-sm-4 col-md-3 col-lg-2 d-none d-sm-block">
+        <%= render 'layouts/admin/sidebar' %>
+      </aside>
+
+      <section id="container" class="col-sm-8 col-md-9 col-lg-10 ml-sm-auto px-4">
+        <%= content_for :body_page_title %>
+
+        <div class="container-content">
+          <%= flash_messages %>
+
+          <%= yield %>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <%= app_text_version %>
+  </footer>
+
+  <%= render 'layouts/admin/modal_app_links' %>
+</body>
+</html>

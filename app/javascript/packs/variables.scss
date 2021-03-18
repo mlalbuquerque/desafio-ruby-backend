@@ -1,0 +1,79 @@
+// Default
+//
+// Size
+$default-font-size: .875rem;
+// BG
+$default-bg-color: #24245e;
+$default-active-bg-color: #45455a;
+$default-dark-bg-color: #455d3c;
+$default-dark-border-color: #283b22;
+// Text
+$default-text-color: #fff;
+$default-active-text-color: #f7f7f7;
+$default-text-success-color: #28a745;
+$default-text-active-success-color: #1e7e34;
+$default-text-shadow-success-color: rgba(40, 167, 69, .25);
+$default-text-dange-color: #dc3545;
+$default-text-active-dange-color: #bd2130;
+$default-text-shadow-dange-color: rgba(220, 53, 69, .25);
+
+// Navbar
+//
+$navbar-color: #000;
+$navbar-active-color: $default-active-bg-color;
+$navbar-bg-color: $default-active-text-color;
+$navbar-active-bg-color: $default-active-text-color;
+$navbar-border-color: $default-bg-color;
+$navbar-active-border-color: $default-text-color;
+$navbar-shadow-color: rgba(0, 0, 0, .5);
+$navbar-active-shadow-color: rgba(0, 0, 0, .5);
+$navbar-search-color: #f0f0f0;
+$navbar-search-bg-color: rgba(255, 255, 255, .1);
+$navbar-search-shadow-color: rgba(255, 255, 255, .25);
+
+// Container
+//
+// BG
+$container-bg-color: $default-text-color;
+$container-active-bg-color: $default-active-text-color;
+// Text
+$container-text-color: $default-bg-color;
+$container-active-text-color: $default-active-bg-color;
+
+// Sidebar
+//
+// BG
+$aside-bg-color: $default-bg-color;
+$aside-active-bg-color: $default-active-bg-color;
+// Text
+$aside-color: $default-text-color;
+$aside-active-color: $default-active-text-color;
+// Border
+$aside-border-color: $aside-active-bg-color;
+$aside-border-active-color: $aside-bg-color;
+// Titles
+$aside-heading-color: $default-active-text-color;
+// Submenu
+$aside-submenu-bg-color: $default-dark-bg-color;
+$aside-submenu-border-color: $default-dark-border-color;
+
+// Scrollbar
+//
+$scrollbar-track-color: $aside-color;
+$scrollbar-thumb-color: $aside-active-color;
+$scrollbar-thumb-active-color: $default-active-text-color;
+
+// Version
+//
+$app-version-color: $default-active-text-color;
+
+// Select2
+//
+// Valid
+$select2-valid-border-color: $default-text-success-color;
+$select2-valid-active-border-color: $default-text-active-success-color;
+$select2-valid-shadow-border-color: $default-text-shadow-success-color;
+// Invalid
+$select2-invalid-border-color: $default-text-dange-color;
+$select2-invalid-active-border-color: $default-text-active-dange-color;
+$select2-invalid-shadow-border-color: $default-text-shadow-dange-color;

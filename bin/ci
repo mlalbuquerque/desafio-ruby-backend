@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -e;
+
+source $(dirname "$0")/functions;
+
+execute bin/brakeman;
+
+execute bin/rubocop;
+
+execute bin/erblint app/views;
+
+execute bin/scss-lint;
+
+execute bin/eslint;
+
+execute bin/rails db:setup db:test:prepare db:schema:load --trace RAILS_ENV=test;
+
+execute bin/rspec;
+
+success_message CI completed successfully.;

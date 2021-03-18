@@ -1,0 +1,8 @@
+<li class="page-item last">
+  <%= link_to_unless current_page.last?,
+                     t('views.pagination.last').html_safe,
+                     url,
+                     title: t('views.pagination.last'),
+                     class: 'page-link',
+                     remote: remote %>
+</li>

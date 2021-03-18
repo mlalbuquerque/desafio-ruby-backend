@@ -1,0 +1,5 @@
+pt-BR:
+  enumerations:
+    transaction_kind_nature:
+      credit: 'Entrada'
+      debit: 'Saída'

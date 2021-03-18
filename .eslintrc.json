@@ -1,0 +1,49 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "extends": ["airbnb-base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+      "import/no-unresolved": "off",
+      "max-len": ["error", { "code": 80, "tabWidth": 2 }]
+  },
+  "overrides": [
+    {
+      "files": [
+        "app/javascript/packs/application.js",
+        "app/javascript/packs/devise.js"
+      ],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    },
+    {
+      "files": [
+        "app/javascript/packs/bootstrap/bootstrap.js"
+      ],
+      "rules": {
+        "no-underscore-dangle": "off"
+      }
+    },
+    {
+      "files": [
+        "app/javascript/packs/select2/select2-remote.js"
+      ],
+      "rules": {
+        "no-param-reassign": "off",
+        "class-methods-use-this": "off"
+      }
+    }
+  ]
+}
