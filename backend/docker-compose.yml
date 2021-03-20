@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: 'postgres:12.3'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+    environment:
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  app:
+    depends_on:
+      - postgres
+    build: .
+    command: bash start
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/backend'
+      - 'box:/box'
+    environment:
+      - BUNDLE_PATH=/box
+      - DB_HOST=postgres
+      - DB_USER=postgres
+      - DB_PASS=postgres
+
+  box:
+    image: busybox
+    volumes:
+      - box:/box
+
+  mailcatcher:
+    image: tophfr/mailcatcher
+    ports:
+      - 1025:25
+      - 1080:80
+
+volumes:
+  postgres:
+  box:
